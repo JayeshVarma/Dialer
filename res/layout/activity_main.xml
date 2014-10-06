@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+   	android:orientation="vertical"
+   	>
+
+    <com.example.dialer.view.DialerView
+        android:id="@+id/dialerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="200dp"
+        android:layout_marginTop="20dp"/>
+    
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dialerView" >
+        
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mReset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+		android:visibility="invisible"
+        android:text="Reset" />
+
+    <Button
+        android:id="@+id/mManual"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mAutomatic"
+        android:layout_alignBottom="@+id/mAutomatic"
+        android:layout_alignParentRight="true"
+        android:text="Manual" />
+
+    <Button
+        android:id="@+id/mAutomatic"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mReset"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:text="Automatic" />
+    
+</RelativeLayout>
